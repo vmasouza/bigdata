@@ -56,7 +56,7 @@ public class Teste {
         // Funcao de map
         public void map(LongWritable key, Text value, Context con)
                 throws IOException, InterruptedException {
-            con.write(new Text("Testando"), new Text(" 1... 2... 3..."));
+            con.write(new Text("Testando"), new Text(" 1, 2, "));
         }
     }
 
@@ -67,7 +67,7 @@ public class Teste {
                 throws IOException, InterruptedException {
 
             con.write(new Text(key.toString() + values.iterator().next().toString()),
-                    new IntWritable(10));
+                    new IntWritable(3));
         }
     }
 }
